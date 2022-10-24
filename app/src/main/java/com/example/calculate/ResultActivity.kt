@@ -27,7 +27,10 @@ class ResultActivity : AppCompatActivity() {
             "+" -> sum = firstValue + secondValue
             "-" -> sum = firstValue - secondValue
             "*" -> sum = firstValue * secondValue
-            "/" -> sum = firstValue / secondValue
+            "/" -> {
+                if (secondValue != 0)
+                sum = firstValue / secondValue
+            }
         }
         if (sum != 0) textResult.text = sum.toString() else textResult.text = "Немає відповіді"
     }
